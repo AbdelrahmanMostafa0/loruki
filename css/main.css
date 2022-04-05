@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Lato:wght@300;400;700;900&family=Nanum+Gothic:wght@700;800&family=Raleway:wght@100;300&family=Roboto:wght@900&family=Work+Sans:ital,wght@0,200;0,300;0,800;1,200;1,700&display=swap');
+
+/* page style  */
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+/* ----------------css reset----------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+img {
+  width: 100%;
+}
+
+/* -------------Scrollbar styling--------------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ------------------------navbar styling----------------- */
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+/* -----giving the flex on the nav space-between to change the defult of the utiliti class of flex that is set to center */
+.navbar .flex {
+  justify-content: space-between;
+}
+
+
+.navbar nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  padding: 5px;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  border-bottom: solid 1px #fff;
+}
+
+
+/* ----------------hero section------------------------ */
+
+.hero-section {
+  min-height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+
+.hero-section .grid {
+  grid-template-columns: 54% 44%;
+  /* giving it visible value to make the form appear out of the section */
+  overflow: visible;
+}
+
+/* styling the hero text */
+.hero-section h1 {
+  font-size: 40px;
+}
+
+.hero-section p {
+  padding: 10px 0;
+}
+
+
+/* ---------------styling the Request a Demo form----------------- */
+.hero-form {
+  justify-self: end;
+  width: 400px;
+  height: 350px;
+  top: 60px;
+  position: relative;
+  padding: 40px;
+  z-index: 100;
+}
+
+.form-control {
+  margin: 30px 0;
+}
+
+.hero-form input[type="text"],
+.hero-form input[type="email"] {
+  border: none;
+  border-bottom: solid 1px #ccc;
+  padding: 3px;
+  width: 100%;
+  font-size: 16px;
+
+}
+
+.hero-form input[type="submit"] {
+  border: none;
+}
+
+.hero-form input:focus {
+  outline: none;
+}
+
+/* skwy of the hero section  */
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+  transform: skewY(-3deg);
+  position: absolute;
+  bottom: -70px;
+
+}
+
+/* -----------------------hero section ends -----------------*/
+
+
+/* --------------stats section styling-------------- */
+.stats {
+  padding-top: 100px;
+}
+
+/* the main text */
+.stats h3 {
+  max-width: 500px;
+  margin: auto;
+  font-weight: bold;
+}
+
+/* stats text */
+.stats .grid h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* --------------stats section end-------------- */
+
+/* -----------cli styling-------------- */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid *:first-child {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+
+/* ------------------ cloud section styling-------------- */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* languages section styling */
+.languages .card h4 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.languages {
+  margin-bottom: 20px;
+}
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  margin: 18px 10px 40px;
+}
+
+/* ----------------Features page styling start----------- */
+
+
+.features-main img,
+.docs-head img {
+  width: 200px;
+  justify-self: end;
+}
+.features-sub .grid {
+  overflow: hidden;
+}
+.features-sub img {
+  width: 300px;
+  justify-self: end;
+}
+
+
+.features-cards .grid .card:nth-child(1) {
+  grid-column: 1/span 3;
+}
+
+.features-cards .grid .card:nth-child(2) {
+  grid-column: 1/span 2;
+}
+
+.features-cards .grid {
+  padding: 20px;
+}
+
+
+
+.features-cards i {
+  margin-right: 10px;
+}
+
+/* Docs page start */
+.docs-head img {
+  width: 200px;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  margin-left: 0;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: solid #ccc 1px;
+  color: #333;
+  font-weight: 500px;
+}
+
+.docs-main .text-primary {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.docs-main nav li a {
+  color: #333;
+}
+
+.docs-main nav li a:hover {
+  font-weight: bold;
+}
+
+.docs-main .card:nth-child(1) {
+  justify-self: flex-start;
+  width: 300px;
+}
+
+
+code,
+pre {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* footer styling */
+footer .flex {
+  justify-content: space-between;
+}
+
+footer i {
+  margin: 0 5px;
+}
+
+
+/* ---------------------media Quries--------------------- */
+@media(max-width:942px) {
+
+  .hero-section .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .hero-form {
+    top: 40px;
+    justify-self: flex-start;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hero-form {
+    justify-self: center;
+  }
+
+}
+
+
+@media(max-width: 768px) {
+  /* making all the page in column to stack on top of each others */
+  :is(.hero-section, .stats, .cli, .features-cards, .docs-main, .features-sub, .cloud, .features-main) .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* making the docs card the full width of there container */
+  .docs-main .card:nth-child(1),
+  .docs-main .card:nth-child(2) {
+    width: 100%;
+  }
+
+  /* resizing the request demo form to fit the screen */
+  .hero-form {
+    width: 350px;
+    height: 350px;
+    top: 30px;
+
+  }
+
+  /* centering the images */
+  .features-main img,
+  .docs-head img,
+  .features-sub img,
+  .hero-form {
+    justify-self: center;
+    align-items: center;
+  }
+
+  .features-cards .grid .card:nth-child(1) {
+    grid-column: 1;
+  }
+
+  .features-cards .grid .card:nth-child(2) {
+    grid-column: 1;
+  }
+
+
+  .hero-text,
+  .features-main-text,
+  .docs-head-text,
+  .features-sub-text {
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-top: 40px;
+  }
+
+
+  footer .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .flex>* {
+    margin-bottom: 20px;
+  }
+
+  .cli .grid>*:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+}
+
+
+@media(max-width:500px) {
+
+  /* restiling the nav on mobile devices */
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+}
